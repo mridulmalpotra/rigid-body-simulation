@@ -19,6 +19,8 @@ public:
     /* Computed quantities*/
     triple<double> F;		// Force
 
+
+    /* Constructor and other utilities. */
     Vertex();
 
 };

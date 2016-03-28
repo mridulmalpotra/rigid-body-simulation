@@ -10,4 +10,5 @@
 
 int main(int argc, char **argv) {
 
+	// TODO: CUDA implementation of rigid body simulation
 }

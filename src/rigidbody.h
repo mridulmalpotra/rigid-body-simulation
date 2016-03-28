@@ -2,7 +2,9 @@
 #define RIGIDBODY_H
 
 
+#include <cstdio>
 #include <unordered_map>
+
 #include "vertex.h"
 #include "triple.h"
 
@@ -17,11 +19,24 @@ public:
     int *edges[];
 
     /* Using unordered_map for plane with triple<int> for storing verticeIDs. */
-    unordered_map<int, triple<int>> faces;
+    unordered_map<int, triple<int> > faces;
 
-    /**
-     *  Constructor creations to be done in subsequent commits.
-     */
+    /* Constant parameters of rigid body*/
+    double rbMass;
+
+    /* Linear parameters of rigid body. */
+    triple<double> rbX, rbP, rbV, rbF;
+
+    /* Constructor and other utilities. */
+    RigidBody();
+    void initVetices();
+    void initEdges();
+    void initFaces();
+
+    void update(double currTime);
+    void setRBParameters();
+    void printParameters();
+
 };
 
 #endif // RIGIDBODY_H

@@ -5,6 +5,7 @@ RigidBody::RigidBody()
     initVetices();
     initEdges();
     initFaces();
+    initRBParameters();
 }
 
 void RigidBody::initVetices()
@@ -22,9 +23,47 @@ void RigidBody::initFaces()
 
 }
 
-void RigidBody::update(double currTime)
+void RigidBody::initRBParameters()
 {
+    // Calculating mass.
+    rbMass = 0.0f;
+    for (long int i = 0; i < numVertices; ++i)
+        rbMass += vertices[i].mass;
+
+    // Calculating position of rigid body.
+
+    // Calculating velocity of rigid body.
+    rbV = triple<double>(0.0f, 0.0f, 0.0f);
+    for (long int i = 0; i < numVertices; ++i)
+        rbV = rbV.add(vertices[i].v);
+
+    // Calculating momentum of rigid body.
+    rbP = rbV.multiply(rbMass);
+
+    // Force is initially equal to force provided by the force field.
+    rbF = triple<double>(0.0f, 0.0f, 0.0f); //Replace null vector by force field.
+}
+
+void RigidBody::update(double t)
+{
+    triple<double> tmpPos;
     // TODO: Calculate new parameter values for each vertex.
+    for (long int i = 0; i < numVertices; ++i)
+    {
+        // Position
+        tmpPos = vertices[i].F.multiply(0.5*t*t/vertices[i].mass);
+        vertices[i].x  = vertices[i].u.multiply(t);
+        vertices[i].x = vertices[i].x.add(tmpPos);
+
+        // Velocity
+        vertices[i].v = vertices[i].u.add(vertices[i].F.multiply(t/vertices[i].mass));
+
+        // Momentum
+        vertices[i].P = vertices[i].v.multiply(vertices[i].mass);
+
+        // TODO: Force (Non-constant)
+
+    }
 
     // Update rigid body parameter values using parameters of each vertex.
     setRBParameters();
@@ -32,7 +71,20 @@ void RigidBody::update(double currTime)
 
 void RigidBody::setRBParameters()
 {
+    // Calculating position of rigid body.
 
+    // Calculating velocity of rigid body.
+    rbV = triple<double>(0.0f, 0.0f, 0.0f);
+    for (long int i = 0; i < numVertices; ++i)
+        rbV = rbV.add(vertices[i].v);
+
+    // Calculating momentum of rigid body.
+    rbP = rbV.multiply(rbMass);
+
+    // Calculating force on rigid body.
+    rbF = triple<double>(0.0f, 0.0f, 0.0f);
+    for (long int i = 0; i < numVertices; ++i)
+        rbF = rbF.add(vertices[i].F);
 }
 
 void RigidBody::printParameters()

@@ -14,6 +14,7 @@ class RigidBody {
 public:
     /* Vertex array */
     Vertex vertices[];
+    long int numVertices;
 
     /* Adjacency matrix for edges */
     int *edges[];
@@ -32,8 +33,9 @@ public:
     void initVetices();
     void initEdges();
     void initFaces();
+    void initRBParameters();
 
-    void update(double currTime);
+    void update(double t);
     void setRBParameters();
     void printParameters();
 

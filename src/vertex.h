@@ -8,6 +8,7 @@ public:
     /* Constant quantities */
     int vertexID;			// Vertex ID
     double mass;			// Mass
+    triple<double> u;       // Initial Velocity
 
     /* State variables */
     triple<double> x;		// Coordinates

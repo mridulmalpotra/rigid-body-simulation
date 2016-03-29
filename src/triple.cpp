@@ -3,13 +3,6 @@
 #include "triple.h"
 #include <assert.h>
 
-template <typename T>
-triple<T>::triple(T e0, T e1, T e2)
-{
-    e[0] = e0;
-    e[1] = e1;
-    e[2] = e2;
-}
 
 template <typename T>
 const triple<T>& triple<T>::operator+() const
@@ -36,12 +29,6 @@ bool operator!=(const triple<T>& v1, const triple<T>& v2)
 }
 
 template <typename T>
-triple<T> operator+(const triple<T>& v1, const triple<T>& v2)
-{
-    return triple<T>(v1.e[0]+v2.e[0], v1.e[1]+v2.e[1], v1.e[2]+v2.e[2]);
-}
-
-template <typename T>
 triple<T> operator-(const triple<T>& v1, const triple<T>& v2)
 {
     return triple<T>(v1.e[0]-v2.e[0], v1.e[1]-v2.e[1], v1.e[2]-v2.e[2]);
@@ -54,35 +41,9 @@ triple<T> operator/(const triple<T>& v, T scalar)
 }
 
 template <typename T>
-triple<T> operator*(const triple<T>& v, T scalar)
-{
-    return triple<T>(v.e[0]*scalar, v.e[1]*scalar, v.e[2]*scalar);
-}
-
-template <typename T>
-triple<T> operator*(T scalar, const triple<T>& v)
-{
-    return triple<T>(v.e[0]*scalar, v.e[1]*scalar, v.e[2]*scalar);
-}
-
-template <typename T>
-triple<T>& triple<T>::operator+=(const triple<T> &v)
-{
-    e[0] += v.e[0]; e[1] += v.e[1]; e[2] += v.e[2];
-    return *this;
-}
-
-template <typename T>
-triple<T>& triple<T>::operator-=(const triple<T> &v)
+triple<T>& triple<T>::operator-=(const triple& v)
 {
     e[0] -= v.e[0]; e[1] -= v.e[1]; e[2] -= v.e[2];
-    return *this;
-}
-
-template <typename T>
-triple<T>& triple<T>::operator*=(T scalar)
-{
-    e[0] *= scalar; e[1] *= scalar; e[2] *= scalar;
     return *this;
 }
 
@@ -115,7 +76,7 @@ triple<T> unitVector(const triple<T>& v)
 }
 
 template <typename T>
-triple<T> crossProduct(const triple<T>& v1, const triple<T>& v2)
+triple<T> triple<T>::crossProduct(const triple<T>& v1, const triple<T>& v2)
 {
     triple<T> tmp;
     tmp.e[0] = v1.Y() * v2.Z() - v1.Z() * v2.Y();
@@ -125,11 +86,11 @@ triple<T> crossProduct(const triple<T>& v1, const triple<T>& v2)
 }
 
 template <typename T>
-T dotProduct(const triple<T>& v1, const triple<T>& v2)
+T triple<T>::dotProduct(const triple<T>& v1, const triple<T>& v2)
 { return v1.X()*v2.X() + v1.Y()*v2.Y() + v1.Z()*v2.Z(); }
 
 template <typename T>
-T tripleProduct(const triple<T>& v1,const triple<T>& v2,const triple<T>& v3)
+T triple<T>::tripleProduct(const triple<T>& v1,const triple<T>& v2,const triple<T>& v3)
 {
     return dotProduct(( crossProduct(v1, v2)), v3);
 }

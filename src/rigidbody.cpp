@@ -1,26 +1,48 @@
+
+
+#include <iostream>
+
 #include "rigidbody.h"
 
-RigidBody::RigidBody()
+RigidBody::RigidBody(int numV)
 {
-    initVetices();
-    initEdges();
+    rigidBodyID = -1;
+    rbMass = 0.0;
+    numVertices = numV;
+    initVertices(numVertices);
+    cout << "1. Created vertices" << endl;
+    initEdges(numVertices);
+    cout << "2. Created edges" << endl;
     initFaces();
+    cout << "3. Created faces" << endl;
     initRBParameters();
 }
 
-void RigidBody::initVetices()
+void RigidBody::initVertices(int numVertices)
 {
-
+    for (int i = 0; i < numVertices; ++i) {
+        Vertex temp;
+        vertices.push_back(temp);
+    }
 }
 
-void RigidBody::initEdges()
+void RigidBody::initEdges(int numVertices)
 {
+    edges = new int*[numVertices];
+    for (int i = 0; i < numVertices; ++i) {
+        edges[i] = new int[numVertices];
+    }
+    for (int i = 0; i < numVertices; ++i) {
+        for (int j = 0; j < numVertices; ++j) {
+            edges[i][j] = 0;
+        }
+    }
 
 }
 
 void RigidBody::initFaces()
 {
-
+    // no initialization needed as unordered_map already declared
 }
 
 void RigidBody::initRBParameters()

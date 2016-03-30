@@ -3,7 +3,7 @@
 
 
 #include <cstdio>
-#include <unordered_map>
+#include <vector>
 
 #include "vertex.h"
 #include "triple.h"
@@ -12,15 +12,20 @@ using namespace std;
 
 class RigidBody {
 public:
+    /* Constant parameters */
+    int rigidBodyID;
+
     /* Vertex array */
-    Vertex vertices[];
+    vector<Vertex> vertices;
     long int numVertices;
 
     /* Adjacency matrix for edges */
-    int *edges[];
+    int **edges;
+    long int numEdges;
 
     /* Using unordered_map for plane with triple<int> for storing verticeIDs. */
-    unordered_map<int, triple<int> > faces;
+    vector<triple<int>> faces;
+    long int numFaces;
 
     /* Constant parameters of rigid body*/
     double rbMass;
@@ -29,9 +34,9 @@ public:
     triple<double> rbX, rbP, rbV, rbF;
 
     /* Constructor and other utilities. */
-    RigidBody();
-    void initVetices();
-    void initEdges();
+    RigidBody(int numVertices);
+    void initVertices(int numVertices);
+    void initEdges(int numVertices);
     void initFaces();
     void initRBParameters();
 

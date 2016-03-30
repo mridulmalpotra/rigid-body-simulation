@@ -1,6 +1,6 @@
 /*
  ==============================================================================
- Name        : RigidBody.cpp
+ Name        : rigidbodysimulator.cpp
  Author      : Mridul & Srinidhi
  Version     :
  Copyright   : Copyleft
@@ -14,12 +14,12 @@
 #include <cstring>
 #include <string>
 #include <vector>
-#include <stdio.h>
-#include <stdlib.h>
+#include <utility>
+#include <algorithm>
 
 #include "rigidbody.h"
 
-#define TIMESTEP 0.01
+#define TIMESTEP 1
 #define CHECK(F,X) \
 F >> temp; \
 if(temp != X){ throw ios_base::failure(X);}
@@ -28,7 +28,8 @@ if(temp != X){ throw ios_base::failure(X);}
 using namespace std;
 
 vector<RigidBody> rbodies;
-double currTime, timeSpan = 100;
+vector< pair<double, double> > xList, yList, zList;
+double currTime, timeSpan = 10;
 
 void getInputData(string fileName)
 {
@@ -59,10 +60,16 @@ void getInputData(string fileName)
                 /* vertexID */
                 inFile >> rigidBody->vertices[i].vertexID >> temp;
                 /* vertex position vector */
-                inFile >> inputX[0];        
+                inFile >> inputX[0];
                 inFile >> inputX[1];
                 inFile >> inputX[2] >> temp;
 
+//                /* vertex initial position */
+//                rigidBody->vertices[i].xi.X(inputX[0]);
+//                rigidBody->vertices[i].xi.Y(inputX[1]);
+//                rigidBody->vertices[i].xi.Z(inputX[2]);
+
+                /* vertex current position */
                 rigidBody->vertices[i].x.X(inputX[0]);
                 rigidBody->vertices[i].x.Y(inputX[1]);
                 rigidBody->vertices[i].x.Z(inputX[2]);
@@ -72,9 +79,15 @@ void getInputData(string fileName)
                 inFile >> inputV[1];
                 inFile >> inputV[2] >> temp;
 
-                rigidBody->vertices[i].v.X(inputV[0]);
-                rigidBody->vertices[i].v.Y(inputV[1]);
-                rigidBody->vertices[i].v.Z(inputV[2]);
+//                /* vertex initial velocity */
+                rigidBody->vertices[i].u.X(inputV[0]);
+                rigidBody->vertices[i].u.Y(inputV[1]);
+                rigidBody->vertices[i].u.Z(inputV[2]);
+
+                /* vertex current velocity */
+//                rigidBody->vertices[i].v.X(inputV[0]);
+//                rigidBody->vertices[i].v.Y(inputV[1]);
+//                rigidBody->vertices[i].v.Z(inputV[2]);
 
                 /* vertex mass */
                 inFile >> rigidBody->vertices[i].mass;
@@ -118,6 +131,10 @@ void getInputData(string fileName)
         cerr << "Quitting..." << endl;
         exit(1);
     }
+
+    // Initialize rigid body cumulative values
+    for (long int i = 0; i < rbodies.size(); ++i)
+        rbodies[i].initRBParameters();
 }
 
 void printData()
@@ -159,7 +176,7 @@ void printData()
 
 void writeOutputData(string fileName)
 {
-    // COLLADA convertor coming in the next commit
+
 }
 
 void computeParameters()
@@ -172,6 +189,46 @@ void computeParameters()
     }
 }
 
+int checkIntersection(long int a, long int b)
+{
+    if((xList[a].first < xList[b].first && xList[a].second > xList[b].first) &&
+            (yList[a].first < yList[b].first && yList[a].second > yList[b].first) &&
+            (zList[a].first < zList[b].first && zList[a].second > zList[b].first))
+        return 1;
+
+    else if((xList[a].first < xList[b].second && xList[a].second > xList[b].second) &&
+            (yList[a].first < yList[b].second && yList[a].second > yList[b].second) &&
+            (zList[a].first < zList[b].second && zList[a].second > zList[b].second))
+        return 1;
+
+    else if((xList[a].first > xList[b].first && xList[a].first < xList[b].second) &&
+            (yList[a].first > yList[b].first && yList[a].first < yList[b].second) &&
+            (zList[a].first > zList[b].first && zList[a].first < zList[b].second))
+        return 1;
+    return 0;
+}
+
+void checkCollisions()
+{
+    // Create a sorted list of bounding boxes for all rigid bodies
+    for (long int i = 0; i < rbodies.size(); ++i)
+    {
+        xList.push_back(rbodies[i].boundX);
+        yList.push_back(rbodies[i].boundY);
+        zList.push_back(rbodies[i].boundZ);
+    }
+
+    // Simulate collision on detection.
+    for (long int i = 0; i < rbodies.size(); ++i)
+    {
+        for (long int j = 0; j < rbodies.size(); ++j)
+        {
+            if(i != j && checkIntersection(i,j))
+                rbodies[i].simulateIntersection(rbodies[j], currTime);
+        }
+    }
+}
+
 int main()
 {
     cout << "Welcome to Rigid Body Simulator!" << endl;
@@ -179,16 +236,17 @@ int main()
     string inFileName = "sample_specs.txt";
     string outFileName = "";
     getInputData(inFileName);
-    printData();
-    exit(0);
+//    printData();
     currTime = 0.0f;
 
     while( currTime < timeSpan)
     // Or we can have an infinite simulation loop.
     // while( 1 )
     {
-        cout<<"Time: "<<currTime<<" s"<<endl;
-//        computeParameters();
+        cout<<"\n\nTime: "<<currTime<<" s"<<endl;
+        computeParameters();
+//        checkCollisions();
+        printData();
         writeOutputData(outFileName);
 
         currTime += TIMESTEP;
@@ -196,4 +254,3 @@ int main()
 
     return 0;
 }
-

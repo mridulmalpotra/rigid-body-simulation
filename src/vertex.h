@@ -8,9 +8,10 @@ public:
     /* Constant quantities */
     int vertexID;			// Vertex ID
     double mass;			// Mass
-    triple<double> u;       // Initial Velocity
 
     /* State variables */
+    triple<double> u;       // Initial Velocity (will change during collision)
+    triple<double> xi;      // Initial position (will change during collision)
     triple<double> x;		// Coordinates
     triple<double> P;		// Linear momentum
 

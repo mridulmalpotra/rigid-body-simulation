@@ -29,7 +29,12 @@ using namespace std;
 
 vector<RigidBody> rbodies;
 vector< pair<double, double> > xList, yList, zList;
-double currTime, timeSpan = 10;
+double currTime, timeSpan = 60;
+
+void objstoSpec(string dirName) 
+{
+    // TODO: Convert multiple input obj files to single spec file
+}
 
 void getInputData(string fileName)
 {
@@ -175,8 +180,26 @@ void printData()
 }
 
 void writeOutputData(string fileName)
-{
-
+{   
+    cout << "Writing to "+fileName+"_"+to_string(currTime)+".obj" << endl;
+    std::ofstream outFile(fileName+"_"+to_string(currTime)+".obj");
+    outFile << "# Obj file generated from rigid body simulation engine" << endl;
+    outFile << "# Note: Vertice points and faces specified." << endl;
+    outFile << "# Material, normal etc. to be added as needed." << endl;
+    for (int count = 0; count < rbodies.size(); ++count) {
+        outFile << "o rigid_body_" << rbodies[count].rigidBodyID << endl;
+        for (int i = 0; i < rbodies[count].numVertices; ++i) {
+            outFile << "v "<< rbodies[count].vertices[i].x.X() << " " \
+            << rbodies[count].vertices[i].x.Y() << " " \
+            << rbodies[count].vertices[i].x.Z() << endl;
+        }
+        outFile << "s off" << endl;
+        for (int i = 0; i < rbodies[count].numFaces; ++i) {
+            outFile << "f "<< rbodies[count].faces[i].X() + count*rbodies[count].numVertices << " " \
+            << rbodies[count].faces[i].Y() + count*rbodies[count].numVertices << " " \
+            << rbodies[count].faces[i].Z() + count*rbodies[count].numVertices << endl;
+        }
+    }
 }
 
 void computeParameters()
@@ -233,8 +256,8 @@ int main()
 {
     cout << "Welcome to Rigid Body Simulator!" << endl;
 
-    string inFileName = "sample_specs.txt";
-    string outFileName = "";
+    string inFileName = "specs/sample_specs.txt";
+    string outFileName = "obj/blocks";
     getInputData(inFileName);
 //    printData();
     currTime = 0.0f;
@@ -246,8 +269,9 @@ int main()
         cout<<"\n\nTime: "<<currTime<<" s"<<endl;
         computeParameters();
 //        checkCollisions();
-        printData();
+//        printData();
         writeOutputData(outFileName);
+        cin.ignore();
 
         currTime += TIMESTEP;
     }

@@ -10,4 +10,3 @@ Parallel implementation of Rigid Body Dynamics on GPU using CUDA
               $ make
     - Run the executable rbody :
               $ ./rbody 
-

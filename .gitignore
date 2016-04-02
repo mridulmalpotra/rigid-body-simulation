@@ -1,3 +1,4 @@
 src/obj/*
 *.obj
 *.blend*
+profiling/*

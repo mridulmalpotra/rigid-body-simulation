@@ -19,7 +19,7 @@
 
 #include "rigidbody.h"
 
-#define TIMESTEP 1
+#define TIMESTEP 0.01
 #define CHECK(F,X) \
 F >> temp; \
 if(temp != X){ throw ios_base::failure(X);}
@@ -264,12 +264,13 @@ int main()
 
     while( currTime < timeSpan)
     // Or we can have an infinite simulation loop.
-    // while( 1 )
+//    while( 1 )
     {
         cout<<"\n\nTime: "<<currTime<<" s"<<endl;
         computeParameters();
-//        checkCollisions();
-//        printData();
+        checkCollisions();
+        // Enable for debugging purposes. May slow down computation due to I/O bottleneck
+//        printData(); 
         writeOutputData(outFileName);
         cin.ignore();
 

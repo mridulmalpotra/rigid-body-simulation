@@ -41,6 +41,7 @@ void RigidBody::initFaces()
 
 void RigidBody::initRBParameters()
 {
+    triple<double> tmp;
     // Calculating mass.
     rbMass = 0.0f;
     for (long int i = 0; i < numVertices; ++i)
@@ -56,7 +57,10 @@ void RigidBody::initRBParameters()
     // Calculating position of rigid body.
     rbX = triple<double>(0.0f, 0.0f, 0.0f);
     for (long int i = 0; i < numVertices; ++i)
-        rbX = rbX.add(vertices[i].x.multiply(vertices[i].mass));
+    {
+        tmp = vertices[i].x.multiply(1);
+        rbX = rbX.add(tmp.multiply(vertices[i].mass));
+    }
     rbX = rbX.multiply(1/rbMass);
 
     // Calculating bounds of bounding box.
@@ -86,11 +90,17 @@ void RigidBody::initRBParameters()
 
     // Calculating velocity of rigid body.
     rbV = triple<double>(0.0f, 0.0f, 0.0f);
+    tmp = rbV.multiply(1);
     for (long int i = 0; i < numVertices; ++i)
-        rbV = rbV.add(vertices[i].v);
+    {
+        tmp = vertices[i].v.multiply(1);
+        rbV = rbV.add(tmp.multiply(vertices[i].mass));
+    }
+    rbV = rbV.multiply(1/rbMass);
 
-    // Calculating momentum of rigid body.
-    rbP = rbV.multiply(rbMass);
+    // Calculating momentum of rigid body
+    tmp = rbV.multiply(1);
+    rbP = tmp.multiply(rbMass);
 
     // Force is initially equal to force provided by the force field.
     rbF = triple<double>(0.0f, 0.0f, 0.0f); //Replace null vector by force field.
@@ -113,7 +123,8 @@ void RigidBody::update(double t)
         vertices[i].v = vertices[i].u/*.add(vertices[i].F.multiply((t-tlcol)/vertices[i].mass))*/;
 
         // Momentum
-        vertices[i].P = vertices[i].v.multiply(vertices[i].mass);
+        tmpvel = vertices[i].v.multiply(1);
+        vertices[i].P = tmpvel.multiply(vertices[i].mass);
 
         // TODO: Force (Non-constant)
 
@@ -158,12 +169,17 @@ void RigidBody::setRBParameters()
 
     // Calculating velocity of rigid body.
     rbV = triple<double>(0.0f, 0.0f, 0.0f);
+    triple<double> tmp = rbV.multiply(1);
     for (long int i = 0; i < numVertices; ++i)
-        rbV = rbV.add(vertices[i].v.multiply(vertices[i].mass));
+    {
+        tmp = vertices[i].v.multiply(1);
+        rbV = rbV.add(tmp.multiply(vertices[i].mass));
+    }
     rbV = rbV.multiply(1/rbMass);
 
     // Calculating momentum of rigid body.
-    rbP = rbV.multiply(rbMass);
+    tmp = rbV.multiply(1);
+    rbP = tmp.multiply(rbMass);
 
     // Calculating force on rigid body.
     rbF = triple<double>(0.0f, 0.0f, 0.0f);
@@ -196,24 +212,15 @@ void RigidBody::printParameters()
 
 void RigidBody::simulateIntersection(RigidBody rbody, double colT)
 {
-    for (long int i = 0; i < numVertices; ++i)
-    {
-        // Check which vertex collided.
-        if(vertices[i].x.X() > rbody.boundX.first && vertices[i].x.X() < rbody.boundX.second &&
-               vertices[i].x.Y() > rbody.boundY.first && vertices[i].x.Y() < rbody.boundY.second &&
-               vertices[i].x.Z() > rbody.boundZ.first && vertices[i].x.Z() < rbody.boundZ.second)
-        {
-            triple<double> fvel1 = triple<double>(0.0f, 0.0f, 0.0f), fvel2 = triple<double>(0.0f, 0.0f, 0.0f);
-            fvel1 = rbV.multiply((rbMass-rbody.rbMass) / (rbMass+rbody.rbMass));
-            fvel1 = fvel1.add(rbody.rbV.multiply( 2*rbody.rbMass / (rbMass+rbody.rbMass) ));
+    triple<double> fvel1 = triple<double>(rbV.X(), rbV.Y(), rbV.Z()), fvel2 = triple<double>(rbody.rbV.X(), rbody.rbV.Y(), rbody.rbV.Z()),t1 = fvel1.multiply(1), t2 = fvel2.multiply(1);
 
-            fvel2 = rbody.rbV.multiply((rbody.rbMass - rbMass) / (rbMass+rbody.rbMass));
-            fvel2 = fvel2.add(rbV.multiply( 2*rbMass / (rbMass+rbody.rbMass) ));
+    fvel1 = fvel1.multiply((rbMass-rbody.rbMass) / (rbMass+rbody.rbMass));
+    fvel1 = fvel1.add(t2.multiply( 2*rbody.rbMass / (rbMass+rbody.rbMass) ));
 
-            // Collision has happened now, update parameters.
-            tlcol = rbody.tlcol = colT;
-            changeParameters(rbody, fvel1, fvel2);
-            break;
-        }
-    }
+    fvel2 = fvel2.multiply((rbody.rbMass - rbMass) / (rbMass+rbody.rbMass));
+    fvel2 = fvel2.add(t1.multiply( 2*rbMass / (rbMass+rbody.rbMass) ));
+
+    // Collision has happened now, update parameters.
+    tlcol = rbody.tlcol = colT;
+    changeParameters(rbody, fvel1, fvel2);
 }

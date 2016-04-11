@@ -19,7 +19,8 @@
 
 #include "rigidbody.h"
 
-#define TIMESTEP 0.01
+#define TIMESTEP 0.5
+#define EPSILON 1
 #define CHECK(F,X) \
 F >> temp; \
 if(temp != X){ throw ios_base::failure(X);}
@@ -33,7 +34,7 @@ double currTime, timeSpan = 60;
 
 void objstoSpec(string dirName) 
 {
-    // TODO: Convert multiple input obj files to single spec file
+    // TODO: Convert multiplsimulateIntersection(rbodies[j], currTime)e input obj files to single spec file
 }
 
 void getInputData(string fileName)
@@ -214,25 +215,21 @@ void computeParameters()
 
 int checkIntersection(long int a, long int b)
 {
-    if((xList[a].first < xList[b].first && xList[a].second > xList[b].first) &&
-            (yList[a].first < yList[b].first && yList[a].second > yList[b].first) &&
-            (zList[a].first < zList[b].first && zList[a].second > zList[b].first))
-        return 1;
 
-    else if((xList[a].first < xList[b].second && xList[a].second > xList[b].second) &&
-            (yList[a].first < yList[b].second && yList[a].second > yList[b].second) &&
-            (zList[a].first < zList[b].second && zList[a].second > zList[b].second))
-        return 1;
-
-    else if((xList[a].first > xList[b].first && xList[a].first < xList[b].second) &&
-            (yList[a].first > yList[b].first && yList[a].first < yList[b].second) &&
-            (zList[a].first > zList[b].first && zList[a].first < zList[b].second))
+    if((xList[b].first < (xList[a].second + EPSILON) && xList[a].first < (xList[b].second + EPSILON)) &&
+    (yList[b].first < (yList[a].second + EPSILON) && yList[a].first < (yList[b].second + EPSILON)) &&
+    (zList[b].first < (zList[a].second + EPSILON) && zList[a].first < (zList[b].second + EPSILON)))
         return 1;
     return 0;
 }
 
 void checkCollisions()
 {
+    // Clear all lists
+    xList.clear();
+    yList.clear();
+    zList.clear();
+
     // Create a sorted list of bounding boxes for all rigid bodies
     for (long int i = 0; i < rbodies.size(); ++i)
     {

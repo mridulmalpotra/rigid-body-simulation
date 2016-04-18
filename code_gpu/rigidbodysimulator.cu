@@ -1,11 +1,11 @@
 /*
- ==============================================================================
- Name        : rigidbodysimulator.cpp
+ ===============================================================================
+ Name        : RigidBodySimulation.cu
  Author      : Mridul & Srinidhi
  Version     :
  Copyright   : Copyleft
- Description : Serial implementation of Rigid Body Dynamics on CPU using CPP
- ==============================================================================
+ Description : Parallel implementation of Rigid Body Dynamics on GPU using CUDA
+ ===============================================================================
  */
 
 #include <iostream>
@@ -32,9 +32,6 @@ vector<RigidBody> rbodies;
 vector< pair<double, double> > xList, yList, zList;
 double currTime, timeSpan = 60;
 
-extern void collisionWrapper(double *x, double *y, double *z, int *mat, int n);
-
-
 void objstoSpec(string dirName) 
 {
     // TODO: Convert multiplsimulateIntersection(rbodies[j], currTime)e input obj files to single spec file
@@ -43,7 +40,7 @@ void objstoSpec(string dirName)
 void getInputData(string fileName)
 {
     cout << "Reading the specification file..." << endl;
-    std::ifstream confFile (fileName.c_str());
+    std::ifstream confFile (fileName);
     std::stringstream inFile;
     inFile << confFile.rdbuf();
     try {
@@ -185,12 +182,8 @@ void printData()
 
 void writeOutputData(string fileName)
 {   
-    std::ostringstream strs;
-    strs << currTime;
-    std::string strTime = strs.str();
-    
-    cout << "Writing to "+fileName+"_"+strTime+".obj" << endl;
-    std::ofstream outFile(string(fileName+"_"+strTime+".obj").c_str());
+    cout << "Writing to "+fileName+"_"+to_string(currTime)+".obj" << endl;
+    std::ofstream outFile(fileName+"_"+to_string(currTime)+".obj");
     outFile << "# Obj file generated from rigid body simulation engine" << endl;
     outFile << "# Note: Vertice points and faces specified." << endl;
     outFile << "# Material, normal etc. to be added as needed." << endl;
@@ -237,47 +230,31 @@ void checkCollisions()
     yList.clear();
     zList.clear();
 
-    double *xarr, *yarr, *zarr;
-    int *mat;
-
-    xarr = new double[2*rbodies.size()];    
-    yarr = new double[2*rbodies.size()];    
-    zarr = new double[2*rbodies.size()];    
-    mat = new int[rbodies.size()*rbodies.size()];
-    
     // Create a sorted list of bounding boxes for all rigid bodies
     for (long int i = 0; i < rbodies.size(); ++i)
     {
-        xarr[2*i] = rbodies[i].boundX.first;
-        xarr[2*i + 1] = rbodies[i].boundX.second;
-        yarr[2*i] = rbodies[i].boundY.first;
-        yarr[2*i + 1] = rbodies[i].boundY.second;
-        zarr[2*i] = rbodies[i].boundZ.first;
-        zarr[2*i + 1] = rbodies[i].boundZ.second;
-
         xList.push_back(rbodies[i].boundX);
         yList.push_back(rbodies[i].boundY);
         zList.push_back(rbodies[i].boundZ);
     }
 
-    // Detect collision using GPU.
-    collisionWrapper(xarr, yarr, zarr, mat, rbodies.size());
-
     // Simulate collision on detection.
     for (long int i = 0; i < rbodies.size(); ++i)
+    {
         for (long int j = 0; j < rbodies.size(); ++j)
         {
-            if(mat[i*rbodies.size() + j])
+            if(i != j && checkIntersection(i,j))
                 rbodies[i].simulateIntersection(rbodies[j], currTime);
         }
-
+    }
 }
 
 int main()
 {
     cout << "Welcome to Rigid Body Simulator!" << endl;
 
-    string inFileName = "specs/sample_specs.txt";
+//    string inFileName = "specs/sample_specs.txt";
+    string inFileName = "specs/big_specs.txt";
     string outFileName = "obj/blocks";
     getInputData(inFileName);
 //    printData();

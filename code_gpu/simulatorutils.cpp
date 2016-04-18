@@ -1,6 +1,6 @@
 /*
  ===============================================================================
- Name        : simulatorutils.cu
+ Name        : simulatorutils.cpp
  Author      : Mridul & Srinidhi
  Version     :
  Copyright   : Copyleft

@@ -190,7 +190,7 @@ void writeOutputData(string fileName)
     std::string strTime = strs.str();
     
     cout << "Writing to "+fileName+"_"+strTime+".obj" << endl;
-    std::ofstream outFile(string(fileName+"_"+strTime+".obj").c_str());
+    std::ofstream outFile(fileName+"_"+strTime+".obj");
     outFile << "# Obj file generated from rigid body simulation engine" << endl;
     outFile << "# Note: Vertice points and faces specified." << endl;
     outFile << "# Material, normal etc. to be added as needed." << endl;

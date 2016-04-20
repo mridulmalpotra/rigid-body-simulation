@@ -267,8 +267,7 @@ int main()
 {
     cout << "Welcome to Rigid Body Simulator!" << endl;
 
-//    string inFileName = "specs/sample_specs.txt";
-    string inFileName = "specs/big_specs.txt";
+    string inFileName = "specs/sample_specs.txt";
     string outFileName = "obj/blocks";
     getInputData(inFileName);
 //    printData();

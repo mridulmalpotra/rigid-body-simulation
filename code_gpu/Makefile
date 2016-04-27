@@ -13,7 +13,7 @@
 #	rm -f rbcu
 	
 	
-objects = rigidbodysimulator.o rigidbody.o vertex.o triple.o simulatorutils.o
+objects = rigidbodysimulator.o rigidbody.o vertex.o triple.o simulatorutils.o bodyutils.o
 
 all: $(objects)
 	nvcc -arch=sm_35 $(objects) -w -o app

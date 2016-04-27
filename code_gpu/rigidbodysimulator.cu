@@ -254,7 +254,7 @@ int main()
     cout << "Welcome to Rigid Body Simulator!" << endl;
 
 //    string inFileName = "specs/sample_specs.txt";
-    string inFileName = "specs/big_specs.txt";
+    string inFileName = "specs/sample_specs.txt";
     string outFileName = "obj/blocks";
     getInputData(inFileName);
 //    printData();
@@ -265,12 +265,13 @@ int main()
 //    while( 1 )
     {
         cout<<"\n\nTime: "<<currTime<<" s"<<endl;
-        computeParameters();
-        checkCollisions();
-        // Enable for debugging purposes. May slow down computation due to I/O bottleneck
-//        printData(); 
-        writeOutputData(outFileName);
+        //computeParameters();
+        updateParameters(&rbodies, currTime);
+        //checkCollisions();
         cin.ignore();
+        // Enable for debugging purposes. May slow down computation due to I/O bottleneck
+        printData(); 
+        writeOutputData(outFileName);
 
         currTime += TIMESTEP;
     }

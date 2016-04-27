@@ -33,7 +33,7 @@ vector< pair<double, double> > xList, yList, zList;
 double currTime, timeSpan = 60;
 
 extern void collisionWrapper(double *x, double *y, double *z, int *mat, int n);
-
+extern void updateParameters(vector<RigidBody> &rbody, double currTime);
 
 void objstoSpec(string dirName) 
 {
@@ -268,7 +268,7 @@ int main()
     cout << "Welcome to Rigid Body Simulator!" << endl;
 
 //    string inFileName = "specs/sample_specs.txt";
-    string inFileName = "specs/big_specs.txt";
+    string inFileName = "specs/sample_specs.txt";
     string outFileName = "obj/blocks";
     getInputData(inFileName);
 //    printData();
@@ -279,12 +279,13 @@ int main()
 //    while( 1 )
     {
         cout<<"\n\nTime: "<<currTime<<" s"<<endl;
-        computeParameters();
-        checkCollisions();
+        //computeParameters();
+        updateParameters(&rbodies, currTime);
+        //checkCollisions();
+        cin.ignore();
         // Enable for debugging purposes. May slow down computation due to I/O bottleneck
-//        printData(); 
+        printData(); 
         writeOutputData(outFileName);
- //       cin.ignore();
 
         currTime += TIMESTEP;
     }

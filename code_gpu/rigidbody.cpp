@@ -1,3 +1,13 @@
+/*
+===============================================================================
+Name        : rigidbody.cpp
+Author      : Mridul & Srinidhi
+Version     :
+Copyright   : Copyleft
+Description : Parallel implementation of Rigid Body Dynamics on GPU using CUDA
+===============================================================================
+*/
+
 #include "rigidbody.h"
 #include <climits>
 

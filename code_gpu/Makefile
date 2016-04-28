@@ -16,10 +16,10 @@
 objects = rigidbodysimulator.o rigidbody.o vertex.o triple.o simulatorutils.o bodyutils.o
 
 all: $(objects)
-	nvcc -arch=sm_35 $(objects) -w -o app
+	nvcc -arch=sm_35 $(objects) -w -g -o app
 
 %.o: %.cpp
-	nvcc -x cu -w -arch=sm_35 -I. -dc $< -o $@
+	nvcc -x cu -w -arch=sm_35 -I. -dc $< -o $@ -g
 
 clean:
-	rm -f *.o app
+	rm -f *.o *~ app

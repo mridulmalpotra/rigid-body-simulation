@@ -58,14 +58,18 @@ __host__ void checkCudaErrors(int err_code)
 }
 
 
-__host__ void updateParameters(vector<RigidBody> rbodies, double currTime)
+__host__ void updateParameters(vector<RigidBody> &rbodies, double currTime)
 {
 	int numVertices = (rbodies)[0].numVertices;
 	int numRigidBodies = (rbodies).size();
 	printf("Number of rigid bodies to be updated: %d\n", numRigidBodies);
 	printf("Number of vertices per rigid body: %d\n", numVertices);
-	string temp;
-	cin >> temp;
+	
+	/*CUDA events for measuring time*/
+	// cudaEvent_t start, stop;
+// 	float time;
+//	cudaEventCreate(&start);
+//	cudaEventCreate(&stop);
 
 	/* Host Vertex SoA */
 	double vertex_IDs[numRigidBodies][numVertices];
@@ -157,9 +161,16 @@ __host__ void updateParameters(vector<RigidBody> rbodies, double currTime)
    	int totalThreads = numRigidBodies * numVertices * 3;
    	int numThreads = min(1008, totalThreads); // 1008 is a multiple of 24 (= 8 vertices * 3 dimensions)
    	int numBlocks = totalThreads/numThreads;
-    updateVectors <<<numBlocks, numThreads>>> (d_vertex_IDs, d_vertex_masses, d_vertex_u, 
+	
+//	cudaEventRecord(start,0);
+	updateVectors <<<numBlocks, numThreads>>> (d_vertex_IDs, d_vertex_masses, d_vertex_u, 
     	d_vertex_xi, d_vertex_x, d_vertex_P, d_vertex_v, d_vertex_F, d_tlcols, currTime, numVertices);
+//	cudaEventRecord(stop,0);
+//	cudaEventSynchronize(stop);
 
+//	cudaEventElapsedTime(&time, start, stop);
+//	printf("Time taken by the kernel: %f ms\n", time);	
+	
     /* Copy Device to Host memory */
     checkCudaErrors(cudaMemcpy(vertex_x, d_vertex_x, sizeof(double)*numRigidBodies*numVertices*3, cudaMemcpyDeviceToHost));
     checkCudaErrors(cudaMemcpy(vertex_P, d_vertex_P, sizeof(double)*numRigidBodies*numVertices*3, cudaMemcpyDeviceToHost));

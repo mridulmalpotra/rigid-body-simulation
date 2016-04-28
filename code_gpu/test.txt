@@ -1,0 +1,1355 @@
+Welcome to Rigid Body Simulator!
+Reading the specification file...
+Creating rigid body no. 1...
+Created
+Creating rigid body no. 2...
+Created
+Creating rigid body no. 3...
+Created
+Creating rigid body no. 4...
+Created
+Creating rigid body no. 5...
+Created
+Creating rigid body no. 6...
+Created
+Creating rigid body no. 7...
+Created
+Creating rigid body no. 8...
+Created
+Creating rigid body no. 9...
+Created
+Creating rigid body no. 10...
+Created
+Creating rigid body no. 11...
+Created
+Creating rigid body no. 12...
+Created
+Creating rigid body no. 13...
+Created
+Creating rigid body no. 14...
+Created
+Creating rigid body no. 15...
+Created
+Creating rigid body no. 16...
+Created
+Creating rigid body no. 17...
+Created
+Creating rigid body no. 18...
+Created
+Creating rigid body no. 19...
+Created
+Creating rigid body no. 20...
+Created
+Creating rigid body no. 21...
+Created
+Creating rigid body no. 22...
+Created
+Creating rigid body no. 23...
+Created
+Creating rigid body no. 24...
+Created
+Creating rigid body no. 25...
+Created
+Creating rigid body no. 26...
+Created
+Creating rigid body no. 27...
+Created
+Creating rigid body no. 28...
+Created
+Creating rigid body no. 29...
+Created
+Creating rigid body no. 30...
+Created
+Creating rigid body no. 31...
+Created
+Creating rigid body no. 32...
+Created
+Creating rigid body no. 33...
+Created
+Creating rigid body no. 34...
+Created
+Creating rigid body no. 35...
+Created
+Creating rigid body no. 36...
+Created
+Creating rigid body no. 37...
+Created
+Creating rigid body no. 38...
+Created
+Creating rigid body no. 39...
+Created
+Creating rigid body no. 40...
+Created
+Creating rigid body no. 41...
+Created
+Creating rigid body no. 42...
+Created
+Creating rigid body no. 43...
+Created
+Creating rigid body no. 44...
+Created
+Creating rigid body no. 45...
+Created
+Creating rigid body no. 46...
+Created
+Creating rigid body no. 47...
+Created
+Creating rigid body no. 48...
+Created
+Creating rigid body no. 49...
+Created
+Creating rigid body no. 50...
+Created
+Creating rigid body no. 51...
+Created
+Creating rigid body no. 52...
+Created
+Creating rigid body no. 53...
+Created
+Creating rigid body no. 54...
+Created
+Creating rigid body no. 55...
+Created
+Creating rigid body no. 56...
+Created
+Creating rigid body no. 57...
+Created
+Creating rigid body no. 58...
+Created
+Creating rigid body no. 59...
+Created
+Creating rigid body no. 60...
+Created
+Creating rigid body no. 61...
+Created
+Creating rigid body no. 62...
+Created
+Creating rigid body no. 63...
+Created
+Creating rigid body no. 64...
+Created
+Creating rigid body no. 65...
+Created
+Creating rigid body no. 66...
+Created
+Creating rigid body no. 67...
+Created
+Creating rigid body no. 68...
+Created
+Creating rigid body no. 69...
+Created
+Creating rigid body no. 70...
+Created
+Creating rigid body no. 71...
+Created
+Creating rigid body no. 72...
+Created
+Creating rigid body no. 73...
+Created
+Creating rigid body no. 74...
+Created
+Creating rigid body no. 75...
+Created
+Creating rigid body no. 76...
+Created
+Creating rigid body no. 77...
+Created
+Creating rigid body no. 78...
+Created
+Creating rigid body no. 79...
+Created
+Creating rigid body no. 80...
+Created
+Creating rigid body no. 81...
+Created
+Creating rigid body no. 82...
+Created
+Creating rigid body no. 83...
+Created
+Creating rigid body no. 84...
+Created
+Creating rigid body no. 85...
+Created
+Creating rigid body no. 86...
+Created
+Creating rigid body no. 87...
+Created
+Creating rigid body no. 88...
+Created
+Creating rigid body no. 89...
+Created
+Creating rigid body no. 90...
+Created
+Creating rigid body no. 91...
+Created
+Creating rigid body no. 92...
+Created
+Creating rigid body no. 93...
+Created
+Creating rigid body no. 94...
+Created
+Creating rigid body no. 95...
+Created
+Creating rigid body no. 96...
+Created
+Creating rigid body no. 97...
+Created
+Creating rigid body no. 98...
+Created
+Creating rigid body no. 99...
+Created
+Creating rigid body no. 100...
+Created
+Creating rigid body no. 101...
+Created
+Creating rigid body no. 102...
+Created
+Creating rigid body no. 103...
+Created
+Creating rigid body no. 104...
+Created
+Creating rigid body no. 105...
+Created
+Creating rigid body no. 106...
+Created
+Creating rigid body no. 107...
+Created
+Creating rigid body no. 108...
+Created
+Creating rigid body no. 109...
+Created
+Creating rigid body no. 110...
+Created
+Creating rigid body no. 111...
+Created
+Creating rigid body no. 112...
+Created
+Creating rigid body no. 113...
+Created
+Creating rigid body no. 114...
+Created
+Creating rigid body no. 115...
+Created
+Creating rigid body no. 116...
+Created
+Creating rigid body no. 117...
+Created
+Creating rigid body no. 118...
+Created
+Creating rigid body no. 119...
+Created
+Creating rigid body no. 120...
+Created
+Creating rigid body no. 121...
+Created
+Creating rigid body no. 122...
+Created
+Creating rigid body no. 123...
+Created
+Creating rigid body no. 124...
+Created
+Creating rigid body no. 125...
+Created
+Creating rigid body no. 126...
+Created
+Creating rigid body no. 127...
+Created
+Creating rigid body no. 128...
+Created
+Creating rigid body no. 129...
+Created
+Creating rigid body no. 130...
+Created
+Creating rigid body no. 131...
+Created
+Creating rigid body no. 132...
+Created
+Creating rigid body no. 133...
+Created
+Creating rigid body no. 134...
+Created
+Creating rigid body no. 135...
+Created
+Creating rigid body no. 136...
+Created
+Creating rigid body no. 137...
+Created
+Creating rigid body no. 138...
+Created
+Creating rigid body no. 139...
+Created
+Creating rigid body no. 140...
+Created
+Creating rigid body no. 141...
+Created
+Creating rigid body no. 142...
+Created
+Creating rigid body no. 143...
+Created
+Creating rigid body no. 144...
+Created
+Creating rigid body no. 145...
+Created
+Creating rigid body no. 146...
+Created
+Creating rigid body no. 147...
+Created
+Creating rigid body no. 148...
+Created
+Creating rigid body no. 149...
+Created
+Creating rigid body no. 150...
+Created
+Creating rigid body no. 151...
+Created
+Creating rigid body no. 152...
+Created
+Creating rigid body no. 153...
+Created
+Creating rigid body no. 154...
+Created
+Creating rigid body no. 155...
+Created
+Creating rigid body no. 156...
+Created
+Creating rigid body no. 157...
+Created
+Creating rigid body no. 158...
+Created
+Creating rigid body no. 159...
+Created
+Creating rigid body no. 160...
+Created
+Creating rigid body no. 161...
+Created
+Creating rigid body no. 162...
+Created
+Creating rigid body no. 163...
+Created
+Creating rigid body no. 164...
+Created
+Creating rigid body no. 165...
+Created
+Creating rigid body no. 166...
+Created
+Creating rigid body no. 167...
+Created
+Creating rigid body no. 168...
+Created
+Creating rigid body no. 169...
+Created
+Creating rigid body no. 170...
+Created
+Creating rigid body no. 171...
+Created
+Creating rigid body no. 172...
+Created
+Creating rigid body no. 173...
+Created
+Creating rigid body no. 174...
+Created
+Creating rigid body no. 175...
+Created
+Creating rigid body no. 176...
+Created
+Creating rigid body no. 177...
+Created
+Creating rigid body no. 178...
+Created
+Creating rigid body no. 179...
+Created
+Creating rigid body no. 180...
+Created
+Creating rigid body no. 181...
+Created
+Creating rigid body no. 182...
+Created
+Creating rigid body no. 183...
+Created
+Creating rigid body no. 184...
+Created
+Creating rigid body no. 185...
+Created
+Creating rigid body no. 186...
+Created
+Creating rigid body no. 187...
+Created
+Creating rigid body no. 188...
+Created
+Creating rigid body no. 189...
+Created
+Creating rigid body no. 190...
+Created
+Creating rigid body no. 191...
+Created
+Creating rigid body no. 192...
+Created
+Creating rigid body no. 193...
+Created
+Creating rigid body no. 194...
+Created
+Creating rigid body no. 195...
+Created
+Creating rigid body no. 196...
+Created
+Creating rigid body no. 197...
+Created
+Creating rigid body no. 198...
+Created
+Creating rigid body no. 199...
+Created
+Creating rigid body no. 200...
+Created
+Creating rigid body no. 201...
+Created
+Creating rigid body no. 202...
+Created
+Creating rigid body no. 203...
+Created
+Creating rigid body no. 204...
+Created
+Creating rigid body no. 205...
+Created
+Creating rigid body no. 206...
+Created
+Creating rigid body no. 207...
+Created
+Creating rigid body no. 208...
+Created
+Creating rigid body no. 209...
+Created
+Creating rigid body no. 210...
+Created
+Creating rigid body no. 211...
+Created
+Creating rigid body no. 212...
+Created
+Creating rigid body no. 213...
+Created
+Creating rigid body no. 214...
+Created
+Creating rigid body no. 215...
+Created
+Creating rigid body no. 216...
+Created
+Creating rigid body no. 217...
+Created
+Creating rigid body no. 218...
+Created
+Creating rigid body no. 219...
+Created
+Creating rigid body no. 220...
+Created
+Creating rigid body no. 221...
+Created
+Creating rigid body no. 222...
+Created
+Creating rigid body no. 223...
+Created
+Creating rigid body no. 224...
+Created
+Creating rigid body no. 225...
+Created
+Creating rigid body no. 226...
+Created
+Creating rigid body no. 227...
+Created
+Creating rigid body no. 228...
+Created
+Creating rigid body no. 229...
+Created
+Creating rigid body no. 230...
+Created
+Creating rigid body no. 231...
+Created
+Creating rigid body no. 232...
+Created
+Creating rigid body no. 233...
+Created
+Creating rigid body no. 234...
+Created
+Creating rigid body no. 235...
+Created
+Creating rigid body no. 236...
+Created
+Creating rigid body no. 237...
+Created
+Creating rigid body no. 238...
+Created
+Creating rigid body no. 239...
+Created
+Creating rigid body no. 240...
+Created
+Creating rigid body no. 241...
+Created
+Creating rigid body no. 242...
+Created
+Creating rigid body no. 243...
+Created
+Creating rigid body no. 244...
+Created
+Creating rigid body no. 245...
+Created
+Creating rigid body no. 246...
+Created
+Creating rigid body no. 247...
+Created
+Creating rigid body no. 248...
+Created
+Creating rigid body no. 249...
+Created
+Creating rigid body no. 250...
+Created
+Creating rigid body no. 251...
+Created
+Creating rigid body no. 252...
+Created
+Creating rigid body no. 253...
+Created
+Creating rigid body no. 254...
+Created
+Creating rigid body no. 255...
+Created
+Creating rigid body no. 256...
+Created
+Parsed the file successfully.
+
+
+Time: 0 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_0.obj
+
+
+Time: 0.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_0.5.obj
+
+
+Time: 1 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_1.obj
+
+
+Time: 1.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_1.5.obj
+
+
+Time: 2 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_2.obj
+
+
+Time: 2.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_2.5.obj
+
+
+Time: 3 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_3.obj
+
+
+Time: 3.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_3.5.obj
+
+
+Time: 4 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_4.obj
+
+
+Time: 4.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_4.5.obj
+
+
+Time: 5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_5.obj
+
+
+Time: 5.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_5.5.obj
+
+
+Time: 6 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_6.obj
+
+
+Time: 6.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_6.5.obj
+
+
+Time: 7 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_7.obj
+
+
+Time: 7.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_7.5.obj
+
+
+Time: 8 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_8.obj
+
+
+Time: 8.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_8.5.obj
+
+
+Time: 9 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_9.obj
+
+
+Time: 9.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_9.5.obj
+
+
+Time: 10 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_10.obj
+
+
+Time: 10.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_10.5.obj
+
+
+Time: 11 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_11.obj
+
+
+Time: 11.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_11.5.obj
+
+
+Time: 12 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_12.obj
+
+
+Time: 12.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_12.5.obj
+
+
+Time: 13 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_13.obj
+
+
+Time: 13.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_13.5.obj
+
+
+Time: 14 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_14.obj
+
+
+Time: 14.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_14.5.obj
+
+
+Time: 15 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_15.obj
+
+
+Time: 15.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_15.5.obj
+
+
+Time: 16 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_16.obj
+
+
+Time: 16.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_16.5.obj
+
+
+Time: 17 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_17.obj
+
+
+Time: 17.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_17.5.obj
+
+
+Time: 18 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_18.obj
+
+
+Time: 18.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_18.5.obj
+
+
+Time: 19 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_19.obj
+
+
+Time: 19.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_19.5.obj
+
+
+Time: 20 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_20.obj
+
+
+Time: 20.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_20.5.obj
+
+
+Time: 21 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_21.obj
+
+
+Time: 21.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_21.5.obj
+
+
+Time: 22 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_22.obj
+
+
+Time: 22.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_22.5.obj
+
+
+Time: 23 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_23.obj
+
+
+Time: 23.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_23.5.obj
+
+
+Time: 24 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_24.obj
+
+
+Time: 24.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_24.5.obj
+
+
+Time: 25 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_25.obj
+
+
+Time: 25.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_25.5.obj
+
+
+Time: 26 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_26.obj
+
+
+Time: 26.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_26.5.obj
+
+
+Time: 27 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_27.obj
+
+
+Time: 27.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_27.5.obj
+
+
+Time: 28 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_28.obj
+
+
+Time: 28.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_28.5.obj
+
+
+Time: 29 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_29.obj
+
+
+Time: 29.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_29.5.obj
+
+
+Time: 30 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_30.obj
+
+
+Time: 30.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_30.5.obj
+
+
+Time: 31 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_31.obj
+
+
+Time: 31.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_31.5.obj
+
+
+Time: 32 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_32.obj
+
+
+Time: 32.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_32.5.obj
+
+
+Time: 33 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_33.obj
+
+
+Time: 33.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_33.5.obj
+
+
+Time: 34 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_34.obj
+
+
+Time: 34.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_34.5.obj
+
+
+Time: 35 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_35.obj
+
+
+Time: 35.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_35.5.obj
+
+
+Time: 36 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_36.obj
+
+
+Time: 36.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_36.5.obj
+
+
+Time: 37 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_37.obj
+
+
+Time: 37.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_37.5.obj
+
+
+Time: 38 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_38.obj
+
+
+Time: 38.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_38.5.obj
+
+
+Time: 39 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_39.obj
+
+
+Time: 39.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_39.5.obj
+
+
+Time: 40 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_40.obj
+
+
+Time: 40.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_40.5.obj
+
+
+Time: 41 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_41.obj
+
+
+Time: 41.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_41.5.obj
+
+
+Time: 42 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_42.obj
+
+
+Time: 42.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_42.5.obj
+
+
+Time: 43 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_43.obj
+
+
+Time: 43.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_43.5.obj
+
+
+Time: 44 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_44.obj
+
+
+Time: 44.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_44.5.obj
+
+
+Time: 45 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_45.obj
+
+
+Time: 45.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_45.5.obj
+
+
+Time: 46 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_46.obj
+
+
+Time: 46.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_46.5.obj
+
+
+Time: 47 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_47.obj
+
+
+Time: 47.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_47.5.obj
+
+
+Time: 48 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_48.obj
+
+
+Time: 48.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_48.5.obj
+
+
+Time: 49 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_49.obj
+
+
+Time: 49.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_49.5.obj
+
+
+Time: 50 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_50.obj
+
+
+Time: 50.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_50.5.obj
+
+
+Time: 51 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_51.obj
+
+
+Time: 51.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_51.5.obj
+
+
+Time: 52 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_52.obj
+
+
+Time: 52.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_52.5.obj
+
+
+Time: 53 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_53.obj
+
+
+Time: 53.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_53.5.obj
+
+
+Time: 54 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_54.obj
+
+
+Time: 54.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_54.5.obj
+
+
+Time: 55 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_55.obj
+
+
+Time: 55.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_55.5.obj
+
+
+Time: 56 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_56.obj
+
+
+Time: 56.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_56.5.obj
+
+
+Time: 57 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_57.obj
+
+
+Time: 57.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_57.5.obj
+
+
+Time: 58 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_58.obj
+
+
+Time: 58.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_58.5.obj
+
+
+Time: 59 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_59.obj
+
+
+Time: 59.5 s
+Number of rigid bodies to be updated: 256
+Number of vertices per rigid body: 8
+About to launch kernel
+Writing to obj/blocks_59.5.obj

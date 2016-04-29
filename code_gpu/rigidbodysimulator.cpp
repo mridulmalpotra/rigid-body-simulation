@@ -146,7 +146,7 @@ void getInputData(string fileName)
         rbodies[i].initRBParameters();
 }
 
-void printData()
+void printData(void)
 {
     for (int count = 0; count < rbodies.size(); ++count) {
         cout << "\nRIGID BODY ID: " << rbodies[count].rigidBodyID << endl;
@@ -165,21 +165,21 @@ void printData()
         }
 
         /* Printing edges*/
-        cout << "\nNumber of edges = " << rbodies[count].numEdges << endl;
+        /*cout << "\nNumber of edges = " << rbodies[count].numEdges << endl;
         for (int i = 0; i < rbodies[count].numVertices; ++i) {
             for (int j = 0; j < rbodies[count].numVertices; ++j) {
                 cout << rbodies[count].edges[i][j] << " ";
             }
             cout << endl;
-        }
+        }*/
 
         /* Printing faces */
-        cout << "\nNumber of faces = " << rbodies[count].numFaces << endl;
+        /*cout << "\nNumber of faces = " << rbodies[count].numFaces << endl;
         for (int i = 0; i < rbodies[count].numFaces; ++i) {
             cout << "ID:" << (i+1) << " (" << rbodies[count].faces[i].X() << "," << \
                     rbodies[count].faces[i].Y() << "," << \
                     rbodies[count].faces[i].Z() << ") " << endl;
-        }
+        }*/
     }
 }
 
@@ -268,7 +268,7 @@ int main()
     cout << "Welcome to Rigid Body Simulator!" << endl;
 
 //    string inFileName = "specs/sample_specs.txt";
-    string inFileName = "specs/big_specs.txt";
+    string inFileName = "specs/sample_specs.txt";
     string outFileName = "obj/blocks";
     getInputData(inFileName);
 //    printData();
